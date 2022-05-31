@@ -143,6 +143,6 @@ function streamScaled(inputStream, width, height) {
             });
         });
     });
-    await app.listen(HTTP_PORT);
+    await app.listen(HTTP_PORT, '0.0.0.0');
     console.log('Thumbnails loaded - server is listening on port %d', HTTP_PORT);
 })();
