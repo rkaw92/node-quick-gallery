@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+    </head>
+    <body>
+        <header>
+            <h1>Photos</h1>
+        </header>
+        <main>
+            <% for (const [ index, photo ] of photos.entries()) { %>
+                <a href="view/<%= index %>">
+                    <img src="thumbs/<%= index %>" width="<%= photo.thumbnail.width %>" height="<%= photo.thumbnail.height %>" loading="lazy">
+                </a>
+            <% } %>
+        </main>
+    </body>
+</html>

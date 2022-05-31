@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery - photo #<%= photoNumber %></title>
+        <style>
+            body {
+                background-color: #151515;
+                color: white;
+            }
+            a[href] {
+                color: white;
+            }
+            a:visited {
+                color: orange;
+            }
+            img {
+                max-width: 100vw;
+                max-height: calc(100vh - 3em);
+                display: block;
+                margin: 0 auto;
+            }
+            nav {
+                display: block;
+                min-height: 1.5em;
+            }
+            .navbutton {
+                float: left;
+                width: 50%;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 150%;
+            }
+            .navbutton.large {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <img src="/photos/<%= photoNumber %>" loading="eager">
+        </main>
+        <nav>
+            <% if (!isNaN(previous)) { %>
+                <a class="navbutton prev" href="<%= previous %>">Previous</a>
+            <% } else { %>
+                <span class="navbutton prev placeholder">&nbsp;</span>
+            <% } %>
+            <% if (!isNaN(next)) { %>
+                <a class="navbutton next" href="<%= next %>">Next</a>
+            <% } else { %>
+                <span class="navbutton next placeholder">&nbsp;</span>
+            <% } %>
+            <a class="navbutton large" href="/">Index</a>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "quick-gallery",
+  "version": "0.1.0",
+  "description": "an online photo gallery",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gallery",
+    "photos"
+  ],
+  "author": "Robert Kawecki <robert+public@rkaw.pl>",
+  "license": "MIT",
+  "volta": {
+    "node": "16.15.0"
+  },
+  "dependencies": {
+    "@fastify/basic-auth": "^3.0.2",
+    "cli-progress": "^3.11.1",
+    "ejs": "^3.1.8",
+    "fastify": "^3.29.0",
+    "glob": "^8.0.3",
+    "p-limit": "^3.1.0",
+    "point-of-view": "^5.3.0",
+    "sharp": "^0.30.6"
+  }
+}
