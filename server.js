@@ -38,6 +38,7 @@ function hashImage(imageBuffer) {
 async function makeThumbnail(inputPath) {
     return await sharp(inputPath)
         .resize(THUMB_WIDTH, THUMB_HEIGHT, { fit: 'contain' })
+        .rotate()
         .toBuffer();
 }
 
